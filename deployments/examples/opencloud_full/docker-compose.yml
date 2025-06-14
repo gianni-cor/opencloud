@@ -32,8 +32,8 @@ services:
       - "--accessLog.format=json"
       - "--accessLog.fields.headers.names.X-Request-Id=keep"
     ports:
-      - "80:80"
-      - "443:443"
+      - "8084:80"
+      - "4444:443"
     volumes:
       - "${DOCKER_SOCKET_PATH:-/var/run/docker.sock}:/var/run/docker.sock:ro"
       - "certs:/certs"
